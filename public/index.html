@@ -246,6 +246,7 @@ darken-1 white-text center scrollspy">
     </div>  
 </div>
   </section>
+ 
   <!--sectioncontact-->
   <section id="contact" class="section section-contact scrollspy">
     <div class="container">
@@ -267,38 +268,57 @@ darken-1 white-text center scrollspy">
   
           </ul>
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m5">
+          <form action='contact' method="POST">
           <div class="card-panel grey lighten-3">
             <h5>Please Fill Out this form</h5>
             <div class="input-field">
-              <input type="text" placeholder="Name">
+              <input type="text" placeholder="Name" name="name">
 
             </div>
             <div class="input-field">
-              <input type="text" placeholder="Email">
+              <input type="text" placeholder="Email" name="email">
               
             </div>
+         
             <div class="input-field">
-              <input type="text" placeholder="Phone">
+              <input type="text" placeholder="Phone" name="phone">
               
             </div>
+           
             <div class="input-field">
-              <textarea class="materialize-textarea " type="text" placeholder="Enter Message"></textarea>
+              <textarea class="materialize-textarea " type="text" placeholder="Enter Message" name="message"></textarea>
               
               <input type="submit" value="submit" class="btn">
             </div>
           </div>
+          </form>
         </div>
+        <div class="col m1">
+          <div class="top"> 
+            <p>
+              <span style="color:teal; font-size: 150%;"></span>
+             <a href="#top"> <i class="material-icons large teal-text">flight </i></a> 
+            </p></div>
+           
+          </div>
       </div>
+     
     </div>
+    
   </section>
 
 <!--footer-->
 <footer class="section teal darken-2 white-text center">
+  
+
   <p class="flow-text">TembeaKenya &copy; 2020 </p>
 </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <!--JavaScript at end of body for optimized loading-->
+  <script src="/travel-website/server.js"></script>
+
+  <script  type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     //sidenav
     const sideNav = document.querySelector('.sidenav');
@@ -316,7 +336,7 @@ darken-1 white-text center scrollspy">
     const ac = document.querySelector('.autocomplete');
     M.Autocomplete.init(ac, {
       data: {
-        "Nairobi": null,
+        "Nairobi":null,
         "maasai mara": null,
         "Chyulu hills": null,
         "Malindi ": null,
